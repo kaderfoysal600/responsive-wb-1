@@ -6,11 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+
+    <link rel="stylesheet" href="dycalendar.css">
     <title>airbnb</title>
 </head>
 <body>
     <section class="header">
-        <nav>
+        <nav class = 'navbar'>
             <a class= 'logo' href="index.html">airbnb</a>
             <div class="nav-links">
                 <ul>
@@ -19,6 +21,10 @@
                     <li><a href="">Online Experience</a></li>
                     
                 </ul>
+            </div>
+            <div class="search-bar-top">
+                <p>start your search</p>
+                <i id = 'search-icon' class="fas fa-search"></i>
             </div>
 
             <div class ='right-elm'>
@@ -29,6 +35,15 @@
                 </ul>
             </div>
         </nav>
+        <div class="menu-item">
+            <ul>
+                <li><a href="">Sign up</a></li>
+                <li><a href="">Login</a></li>
+                <li><a href="">Host your account</a></li>
+                <li><a href="">Host an Experience</a></li>
+                <li><a href="">Help</a></li>
+            </ul>
+        </div>
 
         <div class="search-bar">
             <div class="location search-item">
@@ -55,9 +70,66 @@
             <h5 class = 'flexible'>I'm flexible</h5>
         </div>
 
+        <div class="box">
+            <div class="container">
+                <div id="dycalendar"></div>
+            </div>
+        </div>
+
+        <div class="add-guest">
+            <div class="adults">
+                <div class='name-age'>
+                    <h5>Adults</h5>
+                    <p>Ages 13 to avobe</p>
+                </div>
+                <div class = 'calculation'>
+                    <i  class="fas fa-minus"></i>
+                    <p class= 'cal-elm'>0</p>
+                    <i class="fas fa-plus"></i>
+                </div>
+            </div>
+            <div class="children">
+                <div class='name-age'>
+                    <h5>Children</h5>
+                    <p>Ages 2 to 12</p>
+                </div>
+                <div class = 'calculation'>
+                    <i class="fas fa-minus"></i>
+                    <p class= 'cal-elm'>0</p>
+                    <i class="fas fa-plus"></i>
+                </div>
+            </div>
+            <div class="infants">
+                <div class='name-age'>
+                    <h5>Infants</h5>
+                    <p>under 2</p>
+                </div>
+                <div class = 'calculation'>
+                    <i class="fas fa-minus"></i>
+                    <p class= 'cal-elm'>0</p>
+                    <i class="fas fa-plus"></i>
+                </div>
+            </div>
+        </div>
+
     </section>
+    <div>
+        <h1>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae, eveniet. Commodi nulla ipsa officia voluptatum voluptates facilis autem illo sunt eius aliquam. Velit veritatis suscipit voluptatum! Eum sapiente quidem saepe!</h1>
+    </div>
 
         
-   
+   <script src="main.js"></script>
+   <script src="dycalendar.js"></script>
+   <script>
+       dycalendar.draw({
+           target:'#dycalendar',
+           type:'month',
+           dayformat:'full',
+           monthformat:'full',
+           highlighttargetdate:true,
+           prevnextbutton:'show'
+
+       })
+   </script>
 </body>
 </html>
