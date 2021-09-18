@@ -158,6 +158,7 @@ nav{
   width: 150px;
   border-radius:10px;
   visibility: hidden;
+  z-index:2;
 
 }
 
@@ -283,7 +284,9 @@ nav{
 .cal-elm{
   padding:0px 1rem;
 }
-
+.search-bar-mobile{
+  display:none;
+}
 .add-guest{
   position:absolute;
   top:30%;
@@ -293,4 +296,54 @@ nav{
   padding:2%;
   border-radius: 30px;
   visibility:hidden;
+}
+@media all and (max-width:500px){
+  .logo,.nav-links,.search-bar,.right-elm,.search-bar-top{
+    display:'none';
+    visibility: hidden;
+  }
+  .search-bar-mobile{
+    position: absolute;
+    top:5%;
+    left:15%;
+    visibility:visible;
+    width: 15rem;;
+    display:flex;
+    background:white;
+    border-radius:20px;
+    padding:10px 2px;
+    padding-left: 30px;
+    color: rgb(209, 26, 26);
+    font-size:18px;
+    text-align: center;
+  }
+  .text-mobile{
+    color:black;
+    padding-left: 6px;
+  }
+  .middle{
+    width: 60%;
+    color:rgb(7, 4, 4);
+    position:absolute;
+    top:65%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+  }
+  .header {
+    
+    min-height: 70vh;
+    width: 100%;
+    background-image:url(images/banner.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+  }
+  .flexible{
+    margin-top: 20px;
+  }
+  .middle h5{
+    font-size: 22px;
+  }
+ 
 }
